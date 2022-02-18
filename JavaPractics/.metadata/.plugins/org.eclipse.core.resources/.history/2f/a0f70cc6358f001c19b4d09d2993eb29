@@ -1,0 +1,36 @@
+package org.selenium.programs;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
+
+public class DriverManager {
+	static WebDriver driver;
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", ".//driver/chromedriver.exe");
+		// System.setProperty("webdriver.gecko.driver", ".//driver/geckodriver.exe");
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setAcceptInsecureCerts(false);
+		ChromeOptions option = new ChromeOptions();
+		option.merge(caps);
+		option.addArguments("--start-maximized");
+		driver = new ChromeDriver(option);
+		// driver=new FirefoxDriver();
+		driver.get("https://chercher.tech/practice/practice-dropdowns-selenium-webdriver");
+
+		Select select = new Select(driver.findElement(By.xpath("//select[@id='first']")));
+		WebElement options = select.getWrappedElement();
+		String defaultItem = options.getText();
+		System.out.println(defaultItem);
+
+	}
+
+}

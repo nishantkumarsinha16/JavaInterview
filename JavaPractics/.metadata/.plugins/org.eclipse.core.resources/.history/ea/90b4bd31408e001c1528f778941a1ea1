@@ -1,0 +1,31 @@
+package org.java.programs;
+import java.util.HashMap;
+import java.util.Map;
+
+public class LongestSubString {
+
+	public static void main(String[] args) {
+
+		int output=longestStr("abc");
+		System.out.println(output);
+	}
+
+	public static int longestStr(String s) {
+		int n = s.length();
+		int longest = 0, i = 0, j = 0;
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+
+		while (j < n) {
+			if (map.containsKey(s.charAt(j))) {
+				i = Math.max(map.get(s.charAt(j)), i);
+			}
+				map.put(s.charAt(j), j + 1);				
+				longest = Math.max(longest, j - i + 1);				
+				j=j+1;
+			}
+				
+		return longest;
+
+	}
+
+}

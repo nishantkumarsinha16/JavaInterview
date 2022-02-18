@@ -1,0 +1,13 @@
+package org.java.programs;
+
+public class ReserveseString {
+
+	public static void main(String[] args) {
+		// String is inmuttable
+		String s = "Selenium";
+
+		int count = s.length();
+
+	}
+
+}

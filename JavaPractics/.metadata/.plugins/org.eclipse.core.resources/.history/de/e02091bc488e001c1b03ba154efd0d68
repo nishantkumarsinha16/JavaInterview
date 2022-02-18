@@ -1,0 +1,12 @@
+package org.java.programs;
+
+public class MaxCountFromTextFile {
+
+	public static void main(String[] args) {
+
+		String path = ".//demo.txt"; // System.getProperty("user.dir") +
+		System.out.println(path);
+
+	}
+
+}

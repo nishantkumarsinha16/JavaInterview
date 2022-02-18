@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Generic framwork">
+
+	<!-- <listeners> <listener class-name="com.Automation.reports.AnnotationTransformer" 
+		/> </listeners> -->
+
+	<suite-files>
+	
+		<suite-file
+			path="./src/test/resources/CRGsuites/Lendistry_ForProfit.xml" />
+			
+		<suite-file
+			path="./src/test/resources/CRGsuites/Lendistry_NonProfit.xml" />
+			
+		<suite-file
+			path="./src/test/resources/CRGsuites/Lendistry_AcNonProfit.xml" />
+			
+		<!-- <suite-file path="./src/test/resources/LendistryNYC.xml" /> -->
+	</suite-files>
+</suite> <!-- Suite -->

@@ -1,0 +1,43 @@
+package org.java.programs;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class MaxCountFromTextFile {
+
+	public static void main(String[] args) throws IOException {
+
+		String path = "./demo.txt"; // System.getProperty("user.dir") +
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		BufferedReader reader = new BufferedReader(new FileReader(path));
+		String currentLine = reader.readLine();
+
+		while (currentLine != null) {
+			String words[] = currentLine.toLowerCase().split(" ");
+			for (String word : words) {
+				if (!word.isBlank()) {
+					if (map.containsKey(word)) {
+						map.put(word, map.get(word) + 1);
+					} else {
+						map.put(word, 1);
+					}
+				}
+			}
+			currentLine = reader.readLine();
+
+		}
+		reader.close();
+		
+		for(Entry<String, Integer> mMap:map.entrySet()) {
+			System.out.println(mMap);
+		}
+
+		//map.forEach((k, v) -> System.out.println(k + " : " + v));
+
+	}
+}

@@ -1,0 +1,23 @@
+package org.java.programs;
+
+public class ReserveseString {
+
+	public static void main(String[] args) {
+		// String is inmuttable
+		String s = "Selenium";
+
+	}
+
+	public static void approchOne() {
+		
+		String rev = "";
+		int count = s.length();
+
+		for (int i = count - 1; i >= 0; i--) {
+			rev = rev + s.charAt(i);
+		}
+		System.out.println(rev);
+
+	}
+
+}

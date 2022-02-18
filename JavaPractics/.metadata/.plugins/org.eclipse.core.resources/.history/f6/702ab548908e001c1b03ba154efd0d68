@@ -1,0 +1,14 @@
+package org.java.programs;
+
+public class ClassConcept {
+	
+	public static class NestedClass{
+		
+		
+	}
+	
+	
+
+}
+
+

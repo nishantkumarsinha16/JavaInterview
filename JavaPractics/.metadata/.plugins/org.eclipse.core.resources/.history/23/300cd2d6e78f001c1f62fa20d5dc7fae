@@ -1,0 +1,13 @@
+package org.java.programs;
+
+public class ReverseSentance {
+
+	public static void main(String[] args) {
+		
+		String s="my name is nishant";
+		StringBuffer bf=new StringBuffer(s);
+		System.out.println(s);
+
+	}
+
+}

@@ -1,0 +1,40 @@
+package org.java.programs;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class NonReapeatedCharacter {
+
+	public static void main(String[] args) {
+
+		String input = "abc";
+
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		for (int i = 0; i < input.length(); i++) {
+
+			char ch = input.charAt(i);
+			if (map.containsKey(ch)) {
+				map.put(ch, map.get(ch) + 1);
+			} else {
+				map.put(ch, 1);
+			}
+		}
+
+		// System.out.println(map);
+
+		/*
+		 * for (Entry<Character, Integer> entry : map.entrySet()) { if (entry.getValue()
+		 * == 1) { System.out.println(entry.getKey()); break; // For First Non Repeating
+		 * character } }
+		 */
+	String val=	map.entrySet().stream()
+		.filter(entry -> entry.getValue() == 1)
+		.forEach(e -> e.getKey());
+		
+		
+		//System.out.println(map);
+		
+		
+
+	}
+}

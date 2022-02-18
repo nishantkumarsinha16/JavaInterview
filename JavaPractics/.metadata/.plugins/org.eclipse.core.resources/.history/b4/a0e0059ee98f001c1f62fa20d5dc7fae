@@ -1,0 +1,14 @@
+package org.java.programs;
+
+public class LargestNumber {
+
+	public static void main(String[] args) {
+		
+		int[] number= {1,2,3,4,5);
+		
+		
+		
+
+	}
+
+}

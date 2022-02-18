@@ -1,0 +1,30 @@
+package org.java.programs;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class MaxCountFromTextFile {
+
+	public static void main(String[] args) throws IOException {
+
+		String path = "./demo.txt"; // System.getProperty("user.dir") +
+
+		BufferedReader reader = new BufferedReader(new FileReader(path));
+		String currentLine = reader.readLine();
+
+		while (currentLine != null) {
+
+			String words[] = currentLine.split(" ");
+
+			System.out.println(currentLine);
+			currentLine = reader.readLine();
+
+		}
+
+		reader.close();
+
+	}
+
+}

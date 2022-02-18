@@ -1,0 +1,15 @@
+package org.java.programs;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapConcept {
+	
+	public static void main(String[] args) {
+		Map<Integer, String> map=new HashMap<Integer, String>();
+		
+		map.put(1, "Nishant");
+		map.put(null, sinha);
+	}
+
+}

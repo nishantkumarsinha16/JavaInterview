@@ -1,0 +1,18 @@
+package org.java.programs;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class MaxCountFromTextFile {
+
+	public static void main(String[] args) throws FileNotFoundException {
+
+		String path = ".//demo.txt"; // System.getProperty("user.dir") +
+		System.out.println(path);
+
+		BufferedReader bf = new BufferedReader(new FileReader(path));
+
+	}
+
+}

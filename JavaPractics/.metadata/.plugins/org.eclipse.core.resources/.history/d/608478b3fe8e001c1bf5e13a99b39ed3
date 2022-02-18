@@ -1,0 +1,22 @@
+package org.excel.util;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelReader {
+	
+	public String path="./Book.xlsx";
+	public FileInputStream fis=null;
+	public FileOutputStream fos=null;
+	public XSSFWorkbook workbook=null;
+	
+	public ExcelReader() {
+		fis=new FileInputStream(path);
+	}
+	
+	
+	
+
+}

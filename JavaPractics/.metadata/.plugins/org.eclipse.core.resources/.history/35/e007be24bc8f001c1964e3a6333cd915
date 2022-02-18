@@ -1,0 +1,30 @@
+package org.java.programs;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class ArrayShort {
+
+	public static void main(String[] args) {
+
+		String[] fruit = { "apple", "banana", "graphs", "chowimn", "donkey" };
+		List<String> list = Arrays.asList(fruit);
+		Collections.sort(list);
+		// System.out.println(list);
+		Collections.sort(list, Collections.reverseOrder());
+		// System.out.println(list);
+
+		// list.stream().filter(deal -> deal.equals("apple")).forEach(e ->
+		// System.out.println(e));
+
+		int[] num = { 9, 2, 3, 4, 5 };
+		int[] listNum = Arrays.asList(num);
+		Arrays.sort(listNum);
+
+		System.out.println(Arrays.toString(num));
+		System.out.println(num[0]);
+
+	}
+
+}

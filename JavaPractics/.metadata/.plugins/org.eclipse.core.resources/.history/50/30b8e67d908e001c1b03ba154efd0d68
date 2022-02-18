@@ -1,0 +1,13 @@
+package org.java.programs;
+
+public class ClassConcept {
+
+	public static class NestedClass {
+
+		public void sum() {
+			System.out.println("Nested Class");
+		}
+
+	}
+
+}

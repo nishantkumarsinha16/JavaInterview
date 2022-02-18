@@ -1,0 +1,18 @@
+package org.java.programs;
+
+import java.util.ArrayList;
+
+public class ArrayListConcept {
+	
+	public static void main(String[] args) {
+		
+	ArrayList al=new ArrayList();		
+	al.add("nishant");
+	al.add(123);
+	
+	String s=al.stream().spliterator().characteristics();
+		
+		
+	}
+
+}

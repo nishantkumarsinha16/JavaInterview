@@ -1,0 +1,19 @@
+package org.java.programs;
+
+public class ReverseSentance {
+
+	public static void main(String[] args) {
+		
+		String s="my name is nishant";
+		String rev="";
+		String[] arr=s.split(" ");
+		
+		for(String sp:arr) {
+			rev=rev+sp.charAt(sp);
+			
+		}
+		
+
+	}
+
+}
